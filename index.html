@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Enter の Dream</title>
+	<link rel="stylesheet" href="css\bootstrap.min.css">
+	<script src="js\jquery.js"></script>
+	<script src="js\bootstrap.min.js"></script>
+</head>
+
+<style>
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	#white {
+		height: 42px;
+		width: 100%;
+	}
+	
+	#signin {
+		position: fixed;
+		right: 90px;
+	}
+	
+	nav {
+		background: #ffffff;
+	}
+	
+	#signup {
+		position: fixed;
+		right: 30px;
+	}
+	
+	header {
+		color: whitesmoke;
+		background: darkslateblue;
+		position: relative;
+		height: 170px;
+		left: 0px;
+		width: 100%;
+	}
+	
+	header h4 {
+		color: gainsboro;
+	}
+	
+	#title {
+		position: relative;
+		padding: 30px;
+	}
+	
+	#content {
+		height: 500px;
+		margin-left: 15%;
+		margin-top: 50px;
+	}
+	
+	footer {
+		color: gray;
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-top: 1.5px groove gray;
+	}
+	
+	#email {
+		margin: 20px;
+	}
+	/** {
+		border: 1px solid gray;
+	}*/
+</style>
+
+<body>
+	<div id="white"></div>
+	<nav class="navbar-fixed-top">
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active"><a href="#">首页</a></li>
+			<li role="presentation"><a href="#">Bolg</a></li>
+			<li role="presentation"><a href="#">留言板</a></li>
+			<li role="presentation"><a href="#">Game</a></li>
+			<li role="presentation" id="signin" data-toggle="modal" data-target="#SignUp"><a href="#">登陆</a></li>
+			<li role="presentation" id="signup" data-toggle="modal" data-target="#LogIn"><a href="#">注册</a></li>
+			<li role="presentation" id="Music" onclick="Music()">
+				<a href="#"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+			</li>
+		</ul>
+	</nav>
+	<header>
+		<div id="title">
+			<h1 class="text-center"> Welcome,Adventurer!</h1>
+			<h4 class="text-center">Some <strong><b>GIFTS</b></strong> are waiting for you.</h4>
+		</div>
+	</header>
+	<div id="content">
+		Some content ...
+	</div>
+	<footer>
+		<address class="text-center" id="email">
+			 <p> Copyright © 2015-2065</p>
+  <strong>By CjWzy</strong><br>
+</address>
+	</footer>
+	<div class="modal fade" id="LogIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="Name">Display Name</label>
+							<input type="text" class="form-control" id="Name" placeholder="Your display name">
+						</div>
+						<div class="form-group">
+							<label for="Email">Email address</label>
+							<input type="email" class="form-control" id="Email" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="Password">Password</label>
+							<input type="password" class="form-control" id="Password" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label for="Confirm-password">Confirm password</label>
+							<input type="password" class="form-control" id="Confirm-password" placeholder="Password">
+						</div>
+						<button type="submit" class="btn btn-info" onclick="LogIn()">Submit</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="Email">Email address</label>
+							<input type="email" class="form-control" id="Email-S" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="Password">Password</label>
+							<input type="password" class="form-control" id="Password-S" placeholder="Password">
+						</div>
+						<button type="submit" class="btn btn-info" onclick="SignUp()">Submit</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var debug = {};
+	debug.open = true;
+	debug.log = function(str){
+		if(debug.open){
+			console.log(str);
+		}
+	}
+	function SignUp(){
+		debug.log("SignUp");
+	}
+	function LogIn(){
+		debug.log("LogIn");
+	}
+
+</script>
+
+</html>
